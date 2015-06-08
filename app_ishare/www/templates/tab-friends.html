@@ -1,0 +1,20 @@
+﻿<ion-view view-title="Friends">
+    <ion-content>
+        <div class="item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="text" autocorrect="off" ng-model="paramters.searchKeyword" placeholder="关键字">
+                <i ng-show="paramters.searchKeyword" ng-click="cancelKeywordSearch()" class="clear-search icon ion-ios7-close"></i>
+            </label>
+            <button ng-click="performKeywordSearchInPopover()" class="button button-small">
+                查找
+            </button>
+        </div>
+        <ion-list>
+            <ion-item class="item-avatar" ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
+                <img ng-src="{{friend.face}}">
+                <h2>{{friend.name}}</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

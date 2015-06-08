@@ -1,0 +1,21 @@
+﻿<style>
+    ion-popover-view { position: absolute !important; top: 0px !important; left: 0px !important; margin: 5% !important; width: 90% !important; height: 90% !important; border-radius: 0px !important; opacity:0.98 !important; }
+    ion-header-bar span { padding-top: 0px !important; margin-top: 0px !important; }
+    .popover-arrow { height: 0px !important; }
+    .ion-ios7-close-outline { right: 8px; position: absolute; font-size: 20px; }
+</style>
+<ion-popover-view class="fit" animation="slide-left-right">
+    <ion-header-bar style="height: 45px !important; margin-bottom:0px !important; padding-bottom:0px;">
+        <span class="title">发布文本</span><span class="ion-ios7-close-outline" ng-click="closeTextPopover()"></span>
+    </ion-header-bar>
+    <ion-content style="top:45px !important;margin:0px !important;">
+        <div class="list">
+            <label class="item item-input">
+                <textarea id="page_content" style="min-height:300px;" ng-model="p.text" placeholder="{{p.textTips}}"> </textarea>
+            </label>
+            <button class="button button-full button-positive" ng-click="postText()">
+                写好了，提交
+            </button>
+        </div>
+    </ion-content>
+</ion-popover-view>

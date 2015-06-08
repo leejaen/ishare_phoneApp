@@ -1,0 +1,18 @@
+<ion-view view-title="Account">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-toggle">
+                Enable Friends
+                <label class="toggle">
+                    <input type="checkbox" ng-model="settings.enableFriends">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </ion-item>
+            <button class="button button-block button-positive" ng-click="signOut()">
+                Sign-Out
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-view>
